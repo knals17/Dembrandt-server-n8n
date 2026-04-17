@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  dembrandt-api:
+    build: .
+    container_name: dembrandt_api
+    restart: unless-stopped
+    ports:
+      - "6000:6000"
+    # Opcional: Si n8n y esta API están en la misma red de Docker, puedes omitir 
+    # el mapeo de puertos y llamarlo directamente por el nombre del contenedor
