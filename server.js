@@ -22,7 +22,7 @@ app.post('/extract', async (req, res) => {
         }
 
         // 2. Ejecutar Dembrandt
-        await execPromise(`npx dembrandt "${url}"`);
+        await execPromise(`npx dembrandt "${url}" --save-output --slow`);
 
         // 3. Buscar el archivo JSON recursivamente en la carpeta output
         const findJsonFile = (dir) => {
