@@ -12,6 +12,6 @@ RUN npm install -g dembrandt
 # Copiar el código del servidor
 COPY server.js .
 
-EXPOSE 6000
+EXPOSE 3000
 
 CMD ["node", "server.js"]
